@@ -1,0 +1,271 @@
+/* ---------- Páginas ---------- */
+.pagina {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+.pagina h1,
+.pagina h2 {
+  color: var(--ouro);
+}
+
+/* ---------- Botões ---------- */
+.botao-contorno {
+  background: var(--preto);
+  color: var(--branco);
+  border: 2px solid var(--branco);
+}
+
+.botao-claro {
+  background: var(--branco);
+  color: var(--preto);
+}
+
+.botao:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ---------- Grades ---------- */
+.grade-indicados {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.grade-elenco {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .grade-indicados { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px) {
+  .grade-indicados { grid-template-columns: 1fr; }
+}
+
+/* ---------- Card ---------- */
+.card {
+  position: relative;
+  background: var(--grafite);
+  border: 4px solid var(--grafite-claro);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card-foto {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: 50% 0;
+  background: var(--branco);
+}
+
+.card-info {
+  padding: 0.6rem;
+}
+
+.card-numero {
+  color: var(--ouro);
+}
+
+.card-posicao {
+  margin: 0.3rem 0 0;
+  color: var(--cinza);
+}
+
+.card-botao {
+  width: 100%;
+  margin-top: 0.6rem;
+}
+
+.card-indicado {
+  border-color: var(--ouro);
+}
+
+.card-suspenso {
+  border-color: var(--amarelo);
+}
+
+.card-elenco {
+  filter: grayscale(1);
+}
+
+.card-selecionado {
+  outline: 5px solid var(--gramado);
+  outline-offset: 4px;
+  transform: translateY(-8px);
+}
+
+.card-selecionado .card-botao {
+  background: var(--gramado);
+  border-color: var(--gramado);
+}
+
+/* ---------- Selos ---------- */
+.selo {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--preto);
+}
+
+.selo-indicado {
+  background: var(--ouro);
+}
+
+.selo-suspenso {
+  background: var(--amarelo);
+}
+
+/* ---------- Barra de confirmação ---------- */
+.barra-confirmacao {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--preto);
+  border: 3px solid var(--ouro);
+  border-radius: 8px;
+}
+
+.barra-confirmacao strong {
+  color: var(--ouro);
+}
+
+/* ---------- Histórico ---------- */
+.historico {
+  padding: 1rem;
+  background: var(--gramado);
+  border-radius: 8px;
+}
+
+.historico h2 {
+  color: var(--branco);
+}
+
+.secao-elenco {
+  margin-top: 2.5rem;
+}
+
+/* ---------- Resultado ---------- */
+.total-votos strong {
+  font-family: var(--fonte-titulo);
+  font-size: 2.5rem;
+  color: var(--ouro);
+}
+
+.sem-votos {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: var(--grafite);
+  border: 2px dashed var(--grafite-claro);
+  border-radius: 8px;
+}
+
+.disputa {
+  padding: 0.8rem 1rem;
+  background: var(--grafite);
+  border-left: 6px solid var(--ouro);
+  font-weight: 800;
+}
+
+.placar {
+  list-style: none;
+  padding: 0;
+}
+
+.placar-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
+  background: var(--grafite);
+  border: 3px solid var(--grafite-claro);
+  border-radius: 8px;
+}
+
+.placar-posicao {
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+.placar-foto {
+  width: 80px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: 50% 0;
+  background: var(--branco);
+}
+
+.placar-dados {
+  flex: 1;
+}
+
+.placar-selo {
+  margin-left: 0.6rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font: 800 0.8rem var(--fonte-texto);
+  text-transform: none;
+  color: var(--preto);
+}
+
+.barra {
+  height: 20px;
+  margin: 0.6rem 0;
+  background: var(--grafite-claro);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barra-preenchida {
+  height: 100%;
+  background: var(--cinza);
+  transition: width 0.5s;
+}
+
+.placar-numeros {
+  margin: 0;
+  font-weight: 800;
+}
+
+.placar-craque {
+  border-color: var(--ouro);
+}
+
+.placar-craque .barra-preenchida,
+.placar-craque .placar-selo {
+  background: var(--ouro);
+}
+
+.placar-vice {
+  border-color: var(--prata);
+}
+
+.placar-vice .barra-preenchida,
+.placar-vice .placar-selo {
+  background: var(--prata);
+}
+
+.resultado-acoes {
+  display: flex;
+  gap: 0.8rem;
+}
